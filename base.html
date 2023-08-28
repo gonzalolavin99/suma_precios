@@ -18,10 +18,20 @@
               <p>Precio base: $<span class="precio-inicial"></span> </p>
         
               <p>Cantidad:
-                <span class="cantidad">0</span>
-                <button 
+                <span id="cantidad">0</span>
+                <button onclick="
+                var spanCantidad = document.querySelector('#cantidad');
+                var suma = Number(spanCantidad.innerHTML);
+                suma = suma + 1;
+                spanCantidad.innerHTML = suma;"
                 >+</button>
-                <button
+                <button onclick="
+                var spanCantidad = document.querySelector('#cantidad');
+                var suma = Number(spanCantidad.innerHTML);
+                if (suma > 0) {
+                    suma = suma - 1;
+                    spanCantidad.innerHTML = suma;
+                }"
                 >-</button>
               </p>
             </div>
